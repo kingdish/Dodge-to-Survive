@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+        Cursor.visible = false;
         timer = 0.0f;
         respawnTimer = firstWave;
         timeTextUI.text = "Time: 00:00:00";

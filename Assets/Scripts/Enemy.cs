@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
-    public float maxSpeed = 8f;
+    public float maxSpeed = 10f;
     public float minSpeed = 5f;
     public int offsetRange = 5;
 
@@ -39,10 +39,10 @@ public class Enemy : MonoBehaviour {
         Camera cam = Camera.main;
         float halfHeight = cam.orthographicSize;
         float halfWidth = halfHeight * cam.aspect;
-        if (transform.position.x < -2 * halfWidth
-            || transform.position.x > 4 * halfWidth
-            || transform.position.y < - 2 * halfHeight
-            || transform.position.y > 4 * halfHeight) {
+        if (transform.position.x < -3 * halfWidth
+            || transform.position.x > 5 * halfWidth
+            || transform.position.y < - 3 * halfHeight
+            || transform.position.y > 5 * halfHeight) {
             Destroy(gameObject);
         }
     }
