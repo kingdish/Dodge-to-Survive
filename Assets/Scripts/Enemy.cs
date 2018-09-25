@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour {
         float halfHeight = cam.orthographicSize;
         float halfWidth = halfHeight * cam.aspect;
         float halfDiagonal = Mathf.Sqrt(Mathf.Pow(halfHeight, 2) + Mathf.Pow(halfWidth, 2));
-        Vector2 randDelta = Random.insideUnitCircle.normalized * halfDiagonal;
+        Vector2 randDelta = Random.insideUnitCircle.normalized * 2 * halfDiagonal;
         transform.position = target.transform.position + (Vector3)randDelta;
     }
 
